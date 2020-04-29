@@ -1,6 +1,6 @@
 
 const MongoClient = require( 'mongodb' ).MongoClient;
-const url = "mongodb+srv://chase:123@cluster0-dgmty.mongodb.net/test?retryWrites=true&w=majority"; //get connection link
+const url = "mongodb+srv://chase:123@cluster0-dgmty.mongodb.net/test?retryWrites=true&w=majority"; 
 
 var _db;
 
