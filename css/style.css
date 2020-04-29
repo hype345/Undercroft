@@ -71,3 +71,19 @@
  .navigation a:hover{
     background-color: white;
    }
+
+   .container{
+    display: flex;
+}
+
+.edges{
+    flex-basis:15%;
+    background-color: maroon;
+    height: 1000px;
+}
+
+.mid{
+    flex-basis: 70%;
+    height: 1000px;
+
+}

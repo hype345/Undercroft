@@ -3,6 +3,23 @@ const express = require('express');
 const router = express.Router();
 
 
+router.get('/index', function(req, res) {
+  res.render('../html/index.ejs');
+});
+router.get('/redWagon', function(req, res) {
+  res.render('../html/redWagon.ejs');
+});
+router.get('/getinvolved', function(req, res) {
+  res.render('../html/getinvolved.ejs');
+});
+router.get('/art', function(req, res) {
+  res.render('../html/art.ejs');
+});
+router.get('/aboutus', function(req, res) {
+  res.render('../html/aboutus.ejs');
+});
+
+
 router.get('/', (req, res) => {
   console.log('Request for home recieved');
   res.render('index');
