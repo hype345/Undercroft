@@ -85,6 +85,8 @@
 .mid{
     flex-basis: 70%;
     height: 1000px;
+    background-color: rgb(245, 245, 220);
+
 
 }
 body{
