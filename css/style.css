@@ -3,6 +3,7 @@
     margin: 0;
     list-style: none;
     text-decoration: none;
+    font-family: sans-serif;	
 }
 
 .header {
@@ -79,12 +80,12 @@
 .edges{
     flex-basis:15%;
     background-color: maroon;
-    height: 1000px;
+    height: 1400px;
 }
 
 .mid{
     flex-basis: 70%;
-    height: 1000px;
+    height: 1400px;
     background-color: rgb(245, 245, 220);
 
 
@@ -98,6 +99,48 @@ body{
 form{
     margin-top: 50px;
 }
+
+.sections {
+   
+    height: 250px;
+    width: 1200px;
+   
+  
+    margin:5%;
+}
+
+.Slides {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    height:  300px;
+    background-color: rgb(245, 245, 220);
+}
+.Mission {
+    position: relative;
+    top: 60%;
+    transform: translateY(-50%);
+    height: 300px;
+    background-color: rgb(245, 245, 220);
+    border: 3px solid black;
+}
+.Location {
+    position: relative;
+    top: 70%;
+    transform: translateY(-50%);
+    height: 300px;
+    background-color: rgb(245, 245, 220);
+    border: 3px solid black;
+}
+.Events {
+    position: relative;
+    top: 80%;
+    transform: translateY(-50%);
+    height: 300px;
+    background-color: rgb(245, 245, 220);
+    border: 3px solid black;
+}
+
 
 .form-control{
     width: 50%;
