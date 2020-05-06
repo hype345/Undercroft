@@ -179,3 +179,15 @@ form .submit{
 form .submit:hover{
     background-color: lightgrey;
 }
+
+#footerBox {
+    background: #101010;
+    height: 100px;
+    width: 100%;
+    padding-top: 2%;
+  }
+
+  #footerInfo {
+    color: white;
+    border-spacing: 10px;
+  }
