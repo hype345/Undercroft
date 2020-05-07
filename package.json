@@ -12,9 +12,9 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "bootstrap": "^4.4.1",
     "ejs": "^3.0.2",
     "express": "^4.17.1",
+<<<<<<< HEAD
     "express-handlebars": "^4.0.4",
     "jquery": "^3.4.1",
     "mongodb": "^3.5.7",
@@ -22,5 +22,10 @@
     "nodemailer": "^6.4.6",
     "nodemon": "^2.0.3",
     "popper.js": "^1.16.1"
+=======
+    "mongodb": "^3.5.7",
+    "node": "^14.0.0",
+    "nodemon": "^2.0.3"
+>>>>>>> 290df3521158437a35285ec5a1644135fa7849d0
   }
 }
