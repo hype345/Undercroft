@@ -48,15 +48,15 @@ mongoUtil.connectToServer( function( err, client ) {
       var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-              user: 'cocminioncoc@gmail.com',
+              user: 'cocminioncoc@gmail.com', //get passwords for new account when we switch it from my email to deafult email
               pass: 'ClashofClans83*' 
         }
       });
 
       var mailOptions = {
-        from: 'cocminioncoc@gmail.com',
-        to: 'cshriver@friendsbalt.org',
-        subject: 'Sending Email using Node.js',
+        from: 'cocminioncoc@gmail.com', //add deafult email that is not mine
+        to: 'cshriver@friendsbalt.org', //add undercrofts email when ready for deployment
+        subject: req.body.subject,
         text: req.body.message
       };
       
