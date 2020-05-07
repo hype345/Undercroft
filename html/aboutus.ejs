@@ -11,17 +11,23 @@
         <div class = "contact-title">
             <h2>Say Hello</h2>
             <h3>We are always ready to help!</h3>
+            {{msg}}
         </div>
         <div class="contact-form">
-           <form id="contact-form" method="post" action="">
-              <input name="name" type="text" class="form-control" placeholder="Your Name" required><br>
-
-              <input name="Email" type="email" class="form-control" placeholder="Your Email" required><br>
-
-              <textarea name="message"class="form-control" placeholder="Message" rows="4" required></textarea><br>
-
-              <input type="submit" class="form-control submit" value="SEND MESSAGE">
-           </form>
+           <form method="POST" action="send">
+            <p>
+              <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+            </p>
+            <p>
+              <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+            </p>
+            <p>
+              <textarea name="message" rows="5" class="form control" placeholder="Message"></textarea>
+            </p>
+            <p>
+              <button type="submit" class="form-control submit">Submit</button>
+            </p>
+          </form>
         </div>
     </div>
     <div class="edges">
