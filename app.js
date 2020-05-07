@@ -47,9 +47,7 @@ mongoUtil.connectToServer( function( err, client ) {
 
       var transporter = nodemailer.createTransport({
         service: 'gmail',
-        //hidden code
         auth: {
-          //hidden code
               user: 'cocminioncoc@gmail.com',
               pass: 'ClashofClans83*' 
         }
@@ -68,7 +66,7 @@ mongoUtil.connectToServer( function( err, client ) {
         } else {
           console.log('Email sent: ' + info.response);
         }
-        res.render('aboutus');
+        res.redirect('aboutus');
       });
     })
 
