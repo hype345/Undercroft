@@ -44,7 +44,7 @@ mongoUtil.connectToServer( function( err, client ) {
 
 
     app.post('/send', (req, res) => {
-
+      console.log(req.body)
       var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
