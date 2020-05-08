@@ -195,3 +195,6 @@ form .submit:hover{
     vertical-align: middle;
     margin: auto;
   }
+  .contact-form{
+      /* border: 3px solid black; */
+  }
