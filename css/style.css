@@ -195,3 +195,24 @@ form .submit:hover{
     vertical-align: middle;
     margin: auto;
   }
+
+  .redWagonMission{
+      position: relative;
+      top: 20%;
+      transform: translateY(-50%);
+      height: 300px;
+
+      background-color: rgb(245, 245, 220);
+      border: 3px solid black;
+  }
+
+  .Donate{
+    position: relative;
+    top: 25%;
+    transform: translateY(-50%);
+    height: 300px;
+
+    background-color: black;
+    border: 3px solid white;
+    color: white;
+  }
