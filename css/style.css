@@ -180,14 +180,18 @@ form .submit:hover{
     background-color: lightgrey;
 }
 
-#footerBox {
+.foot-container {
     background: #101010;
     height: 100px;
     width: 100%;
     padding-top: 2%;
+    display:flex;
+    justify-content: space-evenly;
   }
 
-  #footerInfo {
+  .footerInfo {
     color: white;
     border-spacing: 10px;
+    vertical-align: middle;
+    margin: auto;
   }

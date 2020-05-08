@@ -49,7 +49,7 @@ mongoUtil.connectToServer( function( err, client ) {
         service: 'gmail',
         auth: {
               user: 'cocminioncoc@gmail.com', //get passwords for new account when we switch it from my email to deafult email
-              pass: 'ClashofClans83*' 
+              pass: 'ClashofClans83*'
         }
       });
 
