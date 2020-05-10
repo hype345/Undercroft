@@ -79,7 +79,4 @@ mongoUtil.connectToServer( function( err, client ) {
         res.redirect('aboutus');
       });
     })
-
-
-
   })
