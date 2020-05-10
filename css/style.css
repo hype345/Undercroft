@@ -195,10 +195,6 @@ form .submit:hover{
     vertical-align: middle;
     margin: auto;
   }
-<<<<<<< HEAD
-  .contact-form{
-      /* border: 3px solid black; */
-=======
 
   .redWagonMission{
       position: relative;
@@ -219,5 +215,4 @@ form .submit:hover{
     background-color: black;
     border: 3px solid white;
     color: white;
->>>>>>> 168080812d144006bcd190118a573462ead3bf6d
   }
