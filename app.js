@@ -42,7 +42,7 @@ mongoUtil.connectToServer( function( err, client ) {
     var db = mongoUtil.getDb();
     // add mongo code here
 
-
+    //node mailer send method
     app.post('/send', (req, res) => {
       console.log(req.body)
       var transporter = nodemailer.createTransport({
