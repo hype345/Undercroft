@@ -18,18 +18,23 @@ router.get('/getinvolved', (req, res) => {
   res.render('getinvolved');
 });
 
+router.get('/events', (req, res) => {
+  console.log('Request for events page recieved');
+  res.render('events');
+});
+
 router.get('/redWagon', (req, res) => {
     console.log('Request for red wagon page recieved');
     res.render('redWagon');
   });
 
-  router.get('/art', (req, res) => {
-    console.log('Request for people page recieved');
+  router.get('/community', (req, res) => {
+    console.log('Request for comunity page recieved');
     var mongoUtil = require( './mongoUtil' );
     var db = mongoUtil.getDb();
     db.collection('artwork').find().toArray((err, result) => { 
       if (err) return console.log(err)
-      res.render('art', {database: result})
+      res.render('community', {database: result})
     })
   });
 
