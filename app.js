@@ -28,6 +28,20 @@ app.use(bodyParser.json({limit: '50mb'}))
 // Set the view engine to ejs
 app.set('view engine', 'ejs');
 
+//google calendar
+const { google } = require("googleapis")
+const { OAuth2 } = google.auth
+const oAuth2Client = new OAuth2('574314752299-uuqgd8bahgh7nkb3qvu64vh763t0omra.apps.googleusercontent.com', 
+'c0j7mUcCRK2wRVjTrNHttPvG'
+)
+oAuth2Client.setCredentials(
+    {refresh_token: 
+    '1//04YrnyJK0WStHCgYIARAAGAQSNwF-L9IrfIDQcAumg65lQSs2OllL1bTd0r_wdzHh_sQAO_ZOSBXOZ3N-DAc8chtBDCT00xlC1g0',
+})
+
+const getCalendar = () => { return google.calendar({version: 'v3', auth: oAuth2Client})};
+exports.getCalendar = getCalendar;
+
 
 
 var mongoUtil = require('./routes/mongoUtil.js');
@@ -42,6 +56,7 @@ mongoUtil.connectToServer( function( err, client ) {
     var db = mongoUtil.getDb();
     // add mongo code here
 
+    //node mailer send method
     app.post('/send', (req, res) => {
       console.log(req.body)
       var transporter = nodemailer.createTransport({
