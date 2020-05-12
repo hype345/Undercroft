@@ -42,7 +42,6 @@ mongoUtil.connectToServer( function( err, client ) {
     var db = mongoUtil.getDb();
     // add mongo code here
 
-
     app.post('/send', (req, res) => {
       console.log(req.body)
       var transporter = nodemailer.createTransport({
@@ -69,7 +68,6 @@ mongoUtil.connectToServer( function( err, client ) {
         subject: req.body.subject,
         text: req.body.message + "\n" + "\n" + "from," + "\n" + name
       };
-      
       transporter.sendMail(mailOptions, function(error, info){
         if (error) {
           console.log(error);
