@@ -20,7 +20,20 @@ router.get('/getinvolved', (req, res) => {
 
 router.get('/events', (req, res) => {
   console.log('Request for events page recieved');
-  res.render('events');
+
+  var googleCalendar = require( './googleCalendarUtil');
+  var data = [];
+  googleCalendar.getResults().then((result) => 
+  {
+    var test = JSON.parse(result);
+    test.forEach(function (arrayItem) {
+      const start = arrayItem.start.dateTime || arrayItem.start.date;
+      var parts =start.split('-');
+      var x = {Date: new Date (parts[0], parts[1] - 1, parts[2].slice(0,2)), Title: arrayItem.summary};
+      data.push(x);
+  });
+  res.render('events', {userdata: JSON.stringify(data)});
+  })
 });
 
 router.get('/redWagon', (req, res) => {

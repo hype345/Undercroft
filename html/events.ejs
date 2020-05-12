@@ -9,10 +9,25 @@
         </div>
         <div class="mid">
             <h1>Events</h1>
-            
     <div id="caleandar"></div>
     <script type="text/javascript" src="caleandar.js"></script>
-    <script type="text/javascript" src="googlecaleandar.js"></script>
+    <!-- <script type="text/javascript" src="googlecaleandar.js"></script> -->  
+    <script>
+
+
+    var test = JSON.parse('<%- userdata %>');
+    var userevents = [];
+        test.forEach(function (arrayItem) {
+            var x = arrayItem;
+            x.Date = new Date (x.Date);
+            userevents.push(x);
+        });
+        var events = userevents;
+        var settings = {};
+        var element = document.getElementById('caleandar');
+        caleandar(element, events, settings);
+    </script>
+
         </div>
         <div class="edges">
         </div>
