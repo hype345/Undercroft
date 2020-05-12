@@ -42,7 +42,46 @@ mongoUtil.connectToServer( function( err, client ) {
     var db = mongoUtil.getDb();
     // add mongo code here
 
-    //node mailer send method
+    //nodemailer send method for newsletter
+    //THIS IS THE POST FOR THE NEWSLETTER NOT THE FEEDBACK FORM
+    app.post('/emailsend', (req, res) => {
+      console.log(req.body)
+      var transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+              user: 'cocminioncoc@gmail.com', //get passwords and username for new account when we switch it from my email to deafult email
+              pass: 'ClashofClans83*'
+        }
+      });
+      var name;
+      if(req.body.name.length >0)
+      {
+        name = req.body.name;
+      }
+      else
+      {
+        name = "anonymous"
+      }
+
+      var mailOptions = {
+        from: 'cocminioncoc@gmail.com', //add deafult email that is not mine
+        to: 'jbadros@friendsbalt.org', //add undercrofts email when ready for deployment
+        cc: req.body.email,
+        subject: "New Newsletter Request",
+        text: req.body.name + "has requested to register for the newsletter. Their email is" + req.body.email
+      };
+      transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+          console.log(error);
+        } else {
+          console.log('Email sent: ' + info.response);
+        }
+        res.redirect('aboutus');
+      });
+    })
+
+    //node mailer send method for feedback form
+    //THIS IS THE POST METHOD FOR THE FEEDBACK FORM NOT THE NEWSLETTER
     app.post('/send', (req, res) => {
       console.log(req.body)
       var transporter = nodemailer.createTransport({
@@ -59,7 +98,7 @@ mongoUtil.connectToServer( function( err, client ) {
       }
       else
       {
-        name = "anonymus"
+        name = "anonymous"
       }
 
       var mailOptions = {
@@ -69,7 +108,6 @@ mongoUtil.connectToServer( function( err, client ) {
         subject: req.body.subject,
         text: req.body.message + "\n" + "\n" + "from," + "\n" + name
       };
-      
       transporter.sendMail(mailOptions, function(error, info){
         if (error) {
           console.log(error);

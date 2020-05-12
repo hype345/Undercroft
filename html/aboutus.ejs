@@ -10,31 +10,31 @@
     <div class="mid">
         <h1>Contact Us</h1>
         <br></br>
-        <h2>Venue Infromation</h2>
-        <p>Feel free to contact us through any infromation listen below and</p>
-        <p>follow our social media for the latest updates about the Undercroft</p>
-        <br></br>
-        <p>Social Media</p>
-        <p><a href="https://www.instagram.com/" target="_blank">
-         <img border="0" alt="instagram" src="ig.png" height="15" width="15">
-         </a>@undercroftmd</p>
-       <p><a href="https://www.facebook.com/" target="_blank">
-         <img border="0" alt="facebook" src="fb.png" height="15" width="15">
-         </a>@asdada</p>
-         <br></br>
-         <p>Address</p>
-         <p>2629 Huntingdon Ave, Baltimore, MD 21211</p>
-         <br></br>
-         <p>Hours of Operation</p>
-         <p>Monday-Thursday 7-10</p>
-         <p>Friday-Saturday 5-12</p>
-        <br></br>
-        <h2>Feedback</h2>
-        <p>If you would have any questions or would like to submit feedback,</p>
-        <p>feel free to contact us through this form</p>
-        <div class = "contact-title">
-        </div>
         <div class="contact-form">
+            <h2>Venue Infromation</h2>
+            <p>Feel free to contact us through any infromation listen below and</p>
+            <p>follow our social media for the latest updates about the Undercroft</p>
+            <br></br>
+            <p>Social Media</p>
+            <p><a href="https://www.instagram.com/" target="_blank">
+               <img border="0" alt="instagram" src="ig.png" height="15" width="15">
+               </a>@undercroftmd</p>
+            <p><a href="https://www.facebook.com/" target="_blank">
+               <img border="0" alt="facebook" src="fb.png" height="15" width="15">
+               </a>@asdada</p>
+               <br></br>
+               <p>Address</p>
+               <p>2629 Huntingdon Ave, Baltimore, MD 21211</p>
+               <br></br>
+               <p>Hours of Operation</p>
+               <p>Monday-Thursday 7-10</p>
+               <p>Friday-Saturday 5-12</p>
+         </div>
+        <br></br>
+        <div class="contact-form">
+         <h2>Feedback</h2>
+         <p>If you would have any questions or would like to submit feedback,</p>
+         <p>feel free to contact us through this form</p>
            <form method="POST" action="/send">
             <p>
               <input type="text" name="name" class="form-control" placeholder="Your Name (optional)">
@@ -53,8 +53,22 @@
             </p>
           </form>
         </div>
-        <h2>Newsletter</h2>
-        <p>To know more about what we are doing on a regular basis, sign up for our newsletter</p>
+        <br></br>
+        <div class="contact-form">
+            <h2>Newsletter</h2>
+            <p>To know more about what we are doing on a regular basis, sign up for our newsletter</p>
+            <form method="POST" action="/emailsend">
+               <p>
+                 <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+               </p>
+               <p>
+                 <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+               </p>
+               <p>
+                 <button type="submit" class="form-control submit">Submit</button>
+               </p>
+             </form>
+         </div>
     </div>
     <div class="edges">
     </div>
