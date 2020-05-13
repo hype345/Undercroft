@@ -7,6 +7,9 @@
     font-family: 'Lato';
 
 }
+a {
+    color: rgb(0, 0, 0);
+  }
 .header {
     width: 100%;
     height: 80px;
@@ -146,6 +149,33 @@ form{
     background-color: rgb(245, 245, 220);
     border: 3px solid black;
 }
+.sections2 {
+   
+    height: 300px;
+    width: 80%;
+   
+  
+    margin:10%;
+}
+.donate {
+    position: relative;
+    top: 50%;
+    transform: translateY(-30%);
+    height:  800px;
+    background-color: rgb(255, 255, 255);
+    border: 3px solid black;
+}
+.donatebox {
+    position: relative;
+    top: 50%;
+    transform: translateY(-390%);
+    height:  100px;
+    width: 80%;
+    margin:10%;
+    background-color: rgb(245, 245, 220);
+
+    border: 3px solid black;
+}
 
 
 .form-control{
@@ -221,5 +251,13 @@ form .submit:hover{
 .contact-form{
     margin-right: 100px;
     margin-left: 100px;
+    border: 3px solid black;
+}
+.contact-form2{
+    margin:5%;
+    position: relative;
+    top: 35%;
+    transform: translateY(-150%);
+    height: 250px;
     border: 3px solid black;
 }
