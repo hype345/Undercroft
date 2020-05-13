@@ -7,7 +7,6 @@
     font-family: 'Lato';
 
 }
-
 .header {
     width: 100%;
     height: 80px;
@@ -147,33 +146,6 @@ form{
     background-color: rgb(245, 245, 220);
     border: 3px solid black;
 }
-.sections2 {
-   
-    height: 300px;
-    width: 80%;
-   
-  
-    margin:10%;
-}
-.donate {
-    position: relative;
-    top: 50%;
-    transform: translateY(-30%);
-    height:  800px;
-    background-color: rgb(255, 255, 255);
-    border: 3px solid black;
-}
-.donatebox {
-    position: relative;
-    top: 50%;
-    transform: translateY(-390%);
-    height:  100px;
-    width: 80%;
-    margin:10%;
-    background-color: rgb(245, 245, 220);
-
-    border: 3px solid black;
-}
 
 
 .form-control{
@@ -221,7 +193,7 @@ form .submit:hover{
 
   .redWagonMission{
       position: relative;
-      top: 10%;
+      top: 25%;
       transform: translateY(-40%);
       height: 150px;
 
@@ -231,13 +203,22 @@ form .submit:hover{
 
   .Donate{
     position: relative;
-    top: 35%;
+    top: 60%;
     transform: translateY(-40%);
-    height: 250px;
+    height: 375px;
 
-    background-color: grey;
+    background-color: #101010;
     border: 3px solid black;
     color: white;
+  }
+  .center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 25%;
+    height: 200px;
   }
   .Margins{
     height: 300px;
@@ -250,19 +231,4 @@ form .submit:hover{
     margin-right: 100px;
     margin-left: 100px;
     border: 3px solid black;
-}
-.contact-form2{
-    margin:5%;
-    position: relative;
-    top: 35%;
-    transform: translateY(-150%);
-    height: 250px;
-    border: 3px solid black;
-}
-a {
-    color: inherit;
-}
-p1 {
-    font-size: 17px;
-    font-weight: 1000;
 }
