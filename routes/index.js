@@ -14,8 +14,26 @@ router.get('/aboutus', (req, res) => {
 });
 
 router.get('/getinvolved', (req, res) => {
-  console.log('Request for involved page recieved');
+  console.log('Request for get involved page recieved');
   res.render('getinvolved');
+});
+
+router.get('/eventInfo', (req, res) => {
+  console.log('Request for eventInfo page recieved');
+  var googleCalendar = require( './googleCalendarUtil');
+  
+  googleCalendar.getEvent(req.query.eventID).then((result) => {
+    var temp = JSON.parse(result);
+    const start = temp.start.dateTime || temp.start.date;
+    const end = temp.end.dateTime || temp.end.date;
+    var data = {
+      StartDate: end,
+      EndDate: start,
+      Title: temp.summary,
+      Description: temp.description,
+    };
+    res.render('eventInfo',{targetEvent: JSON.stringify(data)});
+  })
 });
 
 router.get('/events', (req, res) => {
@@ -29,7 +47,7 @@ router.get('/events', (req, res) => {
     test.forEach(function (arrayItem) {
       const start = arrayItem.start.dateTime || arrayItem.start.date;
       var parts =start.split('-');
-      var x = {Date: new Date (parts[0], parts[1] - 1, parts[2].slice(0,2)), Title: arrayItem.summary};
+      var x = {Date: new Date (parts[0], parts[1] - 1, parts[2].slice(0,2)), Title: arrayItem.summary, Link: "eventInfo?eventID=" + arrayItem.id};
       data.push(x);
   });
   res.render('events', {userdata: JSON.stringify(data)});

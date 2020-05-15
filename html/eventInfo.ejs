@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ('./include/head') %>
+<body class=back>
+    <%- include ('./include/header') %>
+    <div class="container">  
+        <%- include ('./include/background') %>
+        <div class="edges">
+        </div>
+        <div class="mid">
+            <a href="events"class="button"><h1>Return to Events</h1></a>
+
+
+            <H1 id="title">Title</H1>
+            <p1 id="description">Description</p1>
+            <p id="startdateToenddate">date</p>
+
+
+            <script>
+                var test = JSON.parse('<%- targetEvent %>');
+                document.getElementById("title").innerHTML = test.Title;
+                document.getElementById("description").innerHTML = test.Description;
+                document.getElementById("startdateToenddate").innerHTML = test.StartDate + " - " + test.EndDate;
+            </script>
+
+
+        </div>
+        <div class="edges">
+        </div>
+    </div>  
+    <%- include ('./include/scripts') %>
+    <%- include ('./include/footer') %>
+</body>
+</html>

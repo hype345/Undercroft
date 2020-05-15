@@ -14,11 +14,17 @@ const calendar = google.calendar({version: 'v3', auth: oAuth2Client});
 let userEvents = function() {
   return calendar.events.list({
     calendarId: 'primary',
-    timeMin: (new Date()).toISOString(),
-    maxResults: 10,
+    timeMin: (new Date(-8640000000000000)).toISOString(),
     singleEvents: true,
     orderBy: 'startTime',
      }).then(userData => { return userData.data.items } )
+}
+
+let findEventById = function(eventid) {
+return calendar.events.get({
+calendarId: 'primary',
+eventId: eventid,
+}).then(userData => { return userData.data} )
 }
 
 module.exports = {
@@ -27,5 +33,10 @@ getResults: async () =>
       let Result = await userEvents();
       //console.log("result from gcUtil" + JSON.stringify(Result));
       return JSON.stringify(Result);
-    }
+    },
+getEvent: async (eventid) =>
+{
+  let Result = await findEventById(eventid);
+  return JSON.stringify(Result);
+}
 }
