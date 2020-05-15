@@ -95,6 +95,7 @@
 
 
 }
+
 body{
     margin:0;
     padding:0;
@@ -200,48 +201,61 @@ form .submit:hover{
       background-color: rgb(245, 245, 220);
       border: 3px solid black;
   }
+  .sections2 {
 
+    height: 200px;
+    width: 80%;
+
+
+    margin:10%;
+}
   .Donate{
     position: relative;
     top: 60%;
     transform: translateY(-40%);
-    height: 375px;
+    height: 100%;
 
     background-color: #101010;
     border: 3px solid black;
     color: white;
   }
-  .contact-form2{
-    margin:5%;
+  .contact{
     position: relative;
-    top: 35%;
-    transform: translateY(-120%);
-    height: 350px;
+    top: 55%;
+    transform: translateY(-40%);
+    height: 300px;
+
+    background-color: rgb(245, 245, 220);
     border: 3px solid black;
   }
-  .sections2 {
+  .contact-form2{
+   
+    position: relative;
 
-    height: 300px;
-    width: 80%;
-
-
-    margin:10%;
-}
+    transform: translateY(-50%);
+    height: 350px;
+    border: 3px solid black;
+  
+  }
+  
 .donate {
     position: relative;
-    top: 50%;
-    transform: translateY(-30%);
+    top: 40%;
+    transform: translateY(-20%);
     height:  800px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
     border: 3px solid black;
+    margin:10%;
 }
 .donatebox {
     position: relative;
-    top: 50%;
-    transform: translateY(-390%);
+    top: -80%;
+    transform: translateY(-10%);
+
     height:  100px;
-    width: 80%;
-    margin:10%;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
     background-color: rgb(245, 245, 220);
 
     border: 3px solid black;
