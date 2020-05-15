@@ -12,15 +12,18 @@
 
 
             <H1 id="title">Title</H1>
-            <p1 id="description">Description</p1>
-            <p id="startdateToenddate">date</p>
+            <h1 id="date">Date</h1>
+            <h1 id="description">Description</h1>
+            <p id="startTimeToendTime">duration</p>
+
 
 
             <script>
                 var test = JSON.parse('<%- targetEvent %>');
                 document.getElementById("title").innerHTML = test.Title;
                 document.getElementById("description").innerHTML = test.Description;
-                document.getElementById("startdateToenddate").innerHTML = test.StartDate + " - " + test.EndDate;
+                document.getElementById("date").innerHTML = test.Date;
+                document.getElementById("startTimeToendTime").innerHTML = test.StartTime + " - " + test.EndTime;
             </script>
 
 

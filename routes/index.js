@@ -26,9 +26,18 @@ router.get('/eventInfo', (req, res) => {
     var temp = JSON.parse(result);
     const start = temp.start.dateTime || temp.start.date;
     const end = temp.end.dateTime || temp.end.date;
+
+    function prettyDate(time){
+      var date = new Date((time));
+      var options = {hour: "numeric", minute: "numeric"};
+      return new Intl.DateTimeFormat("en-US", options).format(date);
+  }
+
+    var parts =start.split('-');
     var data = {
-      StartDate: end,
-      EndDate: start,
+      Date: new Date (parts[0], parts[1] - 1, parts[2].slice(0,2)).toDateString(),
+      StartTime: prettyDate(start),
+      EndTime: prettyDate(end),
       Title: temp.summary,
       Description: temp.description,
     };
