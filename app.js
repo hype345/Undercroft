@@ -62,6 +62,7 @@ mongoUtil.connectToServer( function( err, client ) {
       {
         name = "anonymous"
       }
+      
 
       var mailOptions = {
         from: 'cocminioncoc@gmail.com', //add deafult email that is not mine
