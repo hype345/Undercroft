@@ -56,7 +56,14 @@ router.get('/events', (req, res) => {
     test.forEach(function (arrayItem) {
       const start = arrayItem.start.dateTime || arrayItem.start.date;
       var parts =start.split('-');
-      var x = {Date: new Date (parts[0], parts[1] - 1, parts[2].slice(0,2)), Title: arrayItem.summary, Link: "eventInfo?eventID=" + arrayItem.id};
+      var imgID;
+      if(typeof arrayItem.attachments !== 'undefined'){
+        url = arrayItem.attachments[0].fileUrl;
+        var urlParts = url.split('/');
+        imgID = urlParts[5];
+      }
+      else{imgID="1iZo_C-VZ0a7W_MLGOE7WJfCiqkiDB_pB"}
+      var x = {Date: new Date (parts[0], parts[1] - 1, parts[2].slice(0,2)), Title: arrayItem.summary, Link: "eventInfo?eventID=" + arrayItem.id, Image: imgID};
       data.push(x);
   });
   res.render('events', {userdata: JSON.stringify(data)});

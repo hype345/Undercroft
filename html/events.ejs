@@ -10,9 +10,10 @@
         <div class="mid">
             <h1>Events</h1>
     <div id="caleandar"></div>
+
+    <!-- <p1 class="tooltip">hello</p1> -->
     <script type="text/javascript" src="caleandar.js"></script>
     <script>
-
 
     var test = JSON.parse('<%- userdata %>');
     var userevents = [];
@@ -25,6 +26,8 @@
         var settings = {};
         var element = document.getElementById('caleandar');
         caleandar(element, events, settings);
+
+
     </script>
 
         </div>
