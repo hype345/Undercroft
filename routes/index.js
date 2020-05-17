@@ -52,6 +52,7 @@ router.get('/events', (req, res) => {
   var data = [];
   googleCalendar.getResults().then((result) => 
   {
+    console.log(result);
     var test = JSON.parse(result);
     test.forEach(function (arrayItem) {
       const start = arrayItem.start.dateTime || arrayItem.start.date;
