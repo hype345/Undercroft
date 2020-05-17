@@ -1,8 +1,8 @@
 require('dotenv').config();
 
 const { google } = require("googleapis")
-let client_email = process.env.client_email;
-let private_key = process.env.private_key;
+let client_email = process.env.client_email.replace(/\\n/g, '\n');
+let private_key = process.env.private_key.replace(/\\n/g, '\n');
 
 
 // configure a JWT auth client
