@@ -149,6 +149,7 @@ form{
 }
 
 
+
 .form-control{
     width: 50%;
     background: transparent;
@@ -233,7 +234,7 @@ form .submit:hover{
     position: relative;
 
     transform: translateY(-50%);
-    height: 350px;
+    height: 260px;
     border: 3px solid black;
   
   }
@@ -241,15 +242,15 @@ form .submit:hover{
 .donate {
     position: relative;
     top: 40%;
-    transform: translateY(-20%);
-    height:  800px;
+    transform: translateY(-25%);
+    height:  700px;
     background-color: rgb(0, 0, 0);
     border: 3px solid black;
     margin:10%;
 }
 .donatebox {
     position: relative;
-    top: -80%;
+    top: -75%;
     transform: translateY(-10%);
 
     height:  100px;

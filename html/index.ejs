@@ -4,6 +4,8 @@
 <body class=back>
     <%- include ('./include/header') %>
     <div class="container">  
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0"></script>
+
          <%- include ('./include/background') %>
         <div class="edges">
            
@@ -28,8 +30,20 @@
 
             </div>
             <div class="Events">
-                <h1>Event Calander</h1>
-
+               <h1>Events</h1>
+                <div class="fb-page" 
+                data-href="https://www.facebook.com/undercroftmd/" 
+                data-tabs="events" 
+                data-width="700" 
+                data-height="600" 
+                data-small-header="false" 
+                data-adapt-container-width="false" 
+                data-hide-cover="false" 
+                data-show-facepile="true">
+                <blockquote cite="https://www.facebook.com/undercroftmd/" 
+                class="fb-xfbml-parse-ignore">
+                <a href="https://www.facebook.com/undercroftmd/">
+                    The Undercroft</a></blockquote></div>
 
 
             </div>
