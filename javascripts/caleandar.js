@@ -204,6 +204,10 @@ function createCalendar(calendar, element, adjuster){
       for(var n = 0; n < calendar.Model.length; n++){
         var evDate = calendar.Model[n].Date;
         var toDate = new Date(calendar.Selected.Year, calendar.Selected.Month, (i+1));
+
+        console.log("evDate= " + evDate);
+        console.log("toDate= " + toDate);
+
         if(evDate.getTime() == toDate.getTime()){
           console.log("found event");
           number.className += " eventday";
