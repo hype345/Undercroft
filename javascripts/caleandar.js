@@ -235,8 +235,8 @@ function createCalendar(calendar, element, adjuster){
             }
             title.appendChild(a);
           }else{
-            //title.innerHTML += '<a href="' + calendar.Model[n].Link + '">' + calendar.Model[n].Title + '</a>'; //title as link
-            title.innerHTML += '<a href="' + calendar.Model[n].Link + '">' + '<img border="0" alt="facebook" src="https://drive.google.com/thumbnail?id=' + calendar.Model[n].Image + '"height="15" width="15">' + '</a>'; 
+            title.innerHTML += '<a href="' + calendar.Model[n].Link + '">' + calendar.Model[n].Title + '</a>'; //title as link
+            //title.innerHTML += '<a href="' + calendar.Model[n].Link + '">' + '<img border="0" alt="facebook" src="https://drive.google.com/thumbnail?id=' + calendar.Model[n].Image + '"height="15" width="15">' + '</a>'; 
           }
           number.appendChild(title);
         }
