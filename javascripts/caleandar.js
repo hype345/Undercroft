@@ -202,12 +202,12 @@ function createCalendar(calendar, element, adjuster){
       var number = DayNumber(i+1);
       // Check Date against Event Dates
       for(var n = 0; n < calendar.Model.length; n++){
-        var evDate = calendar.Model[n].Date;
-        var toDate = new Date(calendar.Selected.Year, calendar.Selected.Month, (i+1));
-        console.log("evDate= " + evDate);
-        console.log("toDate= " + toDate);
+        var evDate = calendar.Model[n].Date; 
+        var toDate = new Date(calendar.Selected.Year, calendar.Selected.Month, (i+1)); 
+        console.log("evDate= " + evDate.getDate());
+        console.log("toDate= " + toDate.getDate());
 
-        if(evDate.getTime() == toDate.getTime()){
+        if(evDate.getDate() == toDate.getDate()){
           console.log("found event");
           number.className += " eventday";
           var title = document.createElement('span');
