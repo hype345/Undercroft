@@ -202,10 +202,10 @@ function createCalendar(calendar, element, adjuster){
       var number = DayNumber(i+1);
       // Check Date against Event Dates
       for(var n = 0; n < calendar.Model.length; n++){
-        console.log("for loop started " + n);
         var evDate = calendar.Model[n].Date;
         var toDate = new Date(calendar.Selected.Year, calendar.Selected.Month, (i+1));
         if(evDate.getTime() == toDate.getTime()){
+          console.log("found event");
           number.className += " eventday";
           var title = document.createElement('span');
           title.className += "cld-title";
@@ -237,7 +237,6 @@ function createCalendar(calendar, element, adjuster){
             }
             title.appendChild(a);
           }else{
-            console.log("deep else ran");
             //title.innerHTML += '<a href="' + calendar.Model[n].Link + '">' + calendar.Model[n].Title + '</a>'; //title as link
             title.innerHTML += '<a href="' + calendar.Model[n].Link + '">' + '<img border="0" alt="facebook" src="https://drive.google.com/thumbnail?id=' + calendar.Model[n].Image + '"height="15" width="15">' + '</a>'; 
           }
