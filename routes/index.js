@@ -27,17 +27,10 @@ router.get('/eventInfo', (req, res) => {
     const start = temp.start.dateTime || temp.start.date;
     const end = temp.end.dateTime || temp.end.date;
 
-    function prettyDate(time){
-      var date = new Date((time));
-      var options = {hour: "numeric", minute: "numeric"};
-      return new Intl.DateTimeFormat("en-US", options).format(date);
-  }
-
-    var parts =start.split('-');
     var data = {
-      Date: new Date (parts[0], parts[1] - 1, parts[2].slice(0,2)).toDateString(),
-      StartTime: prettyDate(start),
-      EndTime: prettyDate(end),
+      Date: start,
+      StartTime: start,
+      EndTime: end,
       Title: temp.summary,
       Description: temp.description,
     };
@@ -62,9 +55,6 @@ router.get('/events', (req, res) => {
         imgID = urlParts[5];
       }
       else{imgID="1iZo_C-VZ0a7W_MLGOE7WJfCiqkiDB_pB"}
-
-      console.log(start);
-
       var x = {Date: start, Title: arrayItem.summary, Link: "eventInfo?eventID=" + arrayItem.id, Image: imgID};
       data.push(x);
   });

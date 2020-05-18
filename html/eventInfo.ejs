@@ -19,11 +19,23 @@
 
 
             <script>
+
                 var test = JSON.parse('<%- targetEvent %>');
+
+                function prettyDate(time){
+                    var date = new Date((time));
+                    var options = {hour: "numeric", minute: "numeric"};
+                    return new Intl.DateTimeFormat("en-US", options).format(date);
+                }
+                var start = prettyDate(test.StartTime);
+                var end = prettyDate(test.EndTime);
+
+                var parts =test.Date.split('-');
+                var Date = new Date (parts[0], parts[1] - 1, parts[2].slice(0,2)).toDateString()
                 document.getElementById("title").innerHTML = test.Title;
                 document.getElementById("description").innerHTML = test.Description;
-                document.getElementById("date").innerHTML = test.Date;
-                document.getElementById("startTimeToendTime").innerHTML = test.StartTime + " - " + test.EndTime;
+                document.getElementById("date").innerHTML = Date;
+                document.getElementById("startTimeToendTime").innerHTML = start + " - " + end;
             </script>
 
 
