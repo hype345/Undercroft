@@ -63,6 +63,7 @@ router.get('/events', (req, res) => {
         imgID = urlParts[5];
       }
       else{imgID="1iZo_C-VZ0a7W_MLGOE7WJfCiqkiDB_pB"}
+      console.log( new Date (parts[0], parts[1] - 1, parts[2].slice(0,2)));
       var x = {Date: new Date (parts[0], parts[1] - 1, parts[2].slice(0,2)), Title: arrayItem.summary, Link: "eventInfo?eventID=" + arrayItem.id, Image: imgID};
       data.push(x);
   });
