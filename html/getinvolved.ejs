@@ -7,48 +7,65 @@
     <div class="container"> 
         <%- include ('./include/background') %>
         <div class="edges">
-
-            
         </div>
         <div class="mid">
-            
-          
-            <div class="sections">
-                <div class="donate">
+                <br></br>
+                <div class="donatebox">
                     <a href="https://charity.gofundme.com/o/en/campaign/the-undercroft">
-                        <img src="red wagon 3.jpg" width="100%" height="100%" alt="image">
-                    </a>
+                        <h1 style="font-size:50px">Donate</h1>
+                        <p style="font-size:20px"> Click Here to Donate to The Undercroft </p>
+                    </a>        
                 </div>
-       <div class="donatebox">
-            <a href="https://charity.gofundme.com/o/en/campaign/the-undercroft">
-                <h1 style="font-size:50px">Donate</h1>
-                <p style="font-size:20px"> Click Here to Donate to The Undercroft </p>
-            </a>        
-        </div>
+                <br></br>
+                <div class="sections">
+                    <!-- <div class="donate"> -->
+                        <a href="https://charity.gofundme.com/o/en/campaign/the-undercroft">
+                            <img src="red wagon 3.jpg" width="100%" height="100%" alt="image">
+                        </a>
+                </div>
 
-        <div class="contact-form2">
-            <h2>Contact Us</h2>
-            <p>Feel free to contact us through any infromation listen below and</p>
-            <p>follow our social media for the latest updates about the Undercroft</p>
+                <br></br>
+            <div class="contact-form">
+                <h2>Contact Us</h2>
+                <p>Feel free to contact us through any infromation listen below and</p>
+                <p>follow our social media for the latest updates about the Undercroft</p>
+                <br></br>
+                <p>Social Media</p>
+                <p><a href="https://www.instagram.com/undercroftmd/?hl=en" target="_blank">
+                <img border="0" alt="instagram" src="ig.png" height="15" width="15">
+                @undercroftmd</a></p>
+                <p><a href="https://www.facebook.com/undercroftmd/" target="_blank">
+                <img border="0" alt="facebook" src="fb.png" height="15" width="15">
+                @undercroftmd</a></p>
+                <br></br>
+                <p>Address</p>
+                <p>2629 Huntingdon Ave, Baltimore, MD 21211</p>  
+            </div>
             <br></br>
-            <p>Social Media</p>
-            <p><a href="https://www.instagram.com/undercroftmd/?hl=en" target="_blank">
-               <img border="0" alt="instagram" src="ig.png" height="15" width="15">
-               @undercroftmd</a></p>
-            <p><a href="https://www.facebook.com/undercroftmd/" target="_blank">
-               <img border="0" alt="facebook" src="fb.png" height="15" width="15">
-               @undercroftmd</a></p>
-               <br></br>
-               <p>Address</p>
-               <p>2629 Huntingdon Ave, Baltimore, MD 21211</p>
-               <br></br>
-             
-         </div>
-        <br></br>
+            <div class="contact-form">
+                <h2>Newsletter</h2>
+                <p>To know more about what we are doing on a regular basis, sign up for our newsletter</p>
+                <form method="POST" action="/emailsend">
+                    <p>Select which newsletters you would like to join</p>
+                    <input type="checkbox" name="preference1" value="Volunteer Information" /> Volunteer Information
+                    <input type="checkbox" name="preference2" value="Venue Information" /> Venue Information
+                <p>
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                </p>
+                <p>
+                    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                </p>
+                <p>
+                    <button type="submit" class="form-control submit">Submit</button>
+                </p>
+                </form>
+            </div>
+            <br></br>
+        </div>
+        <div class="edges">
+        </div>
     </div>
-</div>
-<div class="edges">
-</div>
+
     </div>  
     <%- include ('./include/scripts') %>
     <%- include ('./include/footer') %>

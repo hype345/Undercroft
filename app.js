@@ -69,7 +69,7 @@ mongoUtil.connectToServer( function( err, client ) {
         to: 'jbadros@friendsbalt.org', //add undercrofts email when ready for deployment
         cc: req.body.email,
         subject: "New Newsletter Request",
-        text: req.body.name + "has requested to register for the newsletter. Their email is" + req.body.email
+        text: req.body.name + "has requested to register for the newsletter. Their email is" + req.body.email + "and they want the following newsletters:" + req.body.preference1 + req.body.preference2
       };
       transporter.sendMail(mailOptions, function(error, info){
         if (error) {
@@ -77,7 +77,7 @@ mongoUtil.connectToServer( function( err, client ) {
         } else {
           console.log('Email sent: ' + info.response);
         }
-        res.redirect('aboutus');
+        res.redirect('getinvolved');
       });
     })
 
