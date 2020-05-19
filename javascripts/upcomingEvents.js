@@ -42,8 +42,8 @@ function listEvents(events)
         var timenode = document.createTextNode(startTime + " ");
         time.appendChild(timenode);
 
-        var titlenode = document.createTextNode(events[i].Title);
-        time.appendChild(titlenode);
+        title.innerHTML = '<a style="text-decoration: underline;" href="' + events[i].Link + '">' + events[i].Title + '</a>';
+
 
         var element = document.getElementById("upcomingEvents");
         element.appendChild(day);
