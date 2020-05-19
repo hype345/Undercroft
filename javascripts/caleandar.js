@@ -205,6 +205,12 @@ function createCalendar(calendar, element, adjuster){
         var toDate = new Date(calendar.Selected.Year, calendar.Selected.Month, (i+1)); 
         if((evDate.getDate() == toDate.getDate()) && (evDate.getFullYear() == toDate.getFullYear()) && (evDate.getMonth() == toDate.getMonth())){
           number.className += " eventday";
+          if(day.className.includes("eventday")) 
+          {
+          }
+          else{
+            day.className += " eventday";
+          }
           var title = document.createElement('span');
           title.className += "cld-title";
           if(typeof calendar.Model[n].Link == 'function' || calendar.Options.EventClick){
@@ -239,6 +245,11 @@ function createCalendar(calendar, element, adjuster){
             title.innerHTML += '<a href="' + calendar.Model[n].Link + '">' + '<img border="0" auto; alt="' + calendar.Model[n].Title + '" src="https://drive.google.com/thumbnail?id=' + calendar.Model[n].Image + '"height="86px" width="100%">' + '</a>'; 
           }
           day.appendChild(title);
+          var tooltipText = document.createElement('span');
+          tooltipText.className += "tooltiptext"
+          var textNode = document.createTextNode("hello");
+          tooltipText.appendChild(textNode);
+          day.appendChild(tooltipText);
         }
       }
       day.appendChild(number);
