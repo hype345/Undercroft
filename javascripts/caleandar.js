@@ -237,9 +237,9 @@ function createCalendar(calendar, element, adjuster){
             title.appendChild(a);
           }else{
             //title.innerHTML += '<a href="' + calendar.Model[n].Link + '">' + calendar.Model[n].Title + '</a>'; //title as link
-            title.innerHTML += '<a href="' + calendar.Model[n].Link + '">' + '<img border="0" auto; alt="facebook" src="https://drive.google.com/thumbnail?id=' + calendar.Model[n].Image + '"height="66" width="100%">' + '</a>'; 
+            title.innerHTML += '<a href="' + calendar.Model[n].Link + '">' + '<img border="0" auto; alt="facebook" src="https://drive.google.com/thumbnail?id=' + calendar.Model[n].Image + '"height="86px" width="100%">' + '</a>'; 
           }
-          number.appendChild(title);
+          day.appendChild(title);
         }
       }
       day.appendChild(number);

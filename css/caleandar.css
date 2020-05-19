@@ -56,7 +56,7 @@
     position: relative;
     margin: 0;
     /* padding: 5px; */
-    height: 100px;
+    height: 90px;
     border: 1px solid #ddd;
     overflow-y: auto;
   }
@@ -76,6 +76,9 @@
     .cld-number{
       margin: 0;
       text-align: left;
+      position: absolute;
+      top: 2%;
+      left: 2%;
     }
       .cld-title{
         font-size: 10px;
