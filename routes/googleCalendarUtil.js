@@ -44,12 +44,13 @@ module.exports = {
 getResults: async () => 
     {
       let Result = await userEvents();
-      //console.log("result from gcUtil" + JSON.stringify(Result));
+      // console.log("result from gcUtil" + JSON.stringify(Result));
       return JSON.stringify(Result);
     },
 getEvent: async (eventid) =>
 {
   let Result = await findEventById(eventid);
+  //console.log("result from gcUtil" + JSON.stringify(Result));
   return JSON.stringify(Result);
 }
 }

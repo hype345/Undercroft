@@ -26,7 +26,6 @@ router.get('/eventInfo', (req, res) => {
     var temp = JSON.parse(result);
     const start = temp.start.dateTime || temp.start.date;
     const end = temp.end.dateTime || temp.end.date;
-
     var data = {
       Date: start,
       StartTime: start,

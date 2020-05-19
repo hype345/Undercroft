@@ -204,7 +204,7 @@ function createCalendar(calendar, element, adjuster){
       for(var n = 0; n < calendar.Model.length; n++){
         var evDate = calendar.Model[n].Date; 
         var toDate = new Date(calendar.Selected.Year, calendar.Selected.Month, (i+1)); 
-        if(evDate.getDate() == toDate.getDate()){
+        if((evDate.getDate() == toDate.getDate()) && (evDate.getFullYear() == toDate.getFullYear()) && (evDate.getMonth() == toDate.getMonth())){
           number.className += " eventday";
           var title = document.createElement('span');
           title.className += "cld-title";
@@ -237,7 +237,7 @@ function createCalendar(calendar, element, adjuster){
             title.appendChild(a);
           }else{
             //title.innerHTML += '<a href="' + calendar.Model[n].Link + '">' + calendar.Model[n].Title + '</a>'; //title as link
-            title.innerHTML += '<a href="' + calendar.Model[n].Link + '">' + '<img border="0" alt="facebook" src="https://drive.google.com/thumbnail?id=' + calendar.Model[n].Image + '"height="15" width="15">' + '</a>'; 
+            title.innerHTML += '<a href="' + calendar.Model[n].Link + '">' + '<img border="0" auto; alt="facebook" src="https://drive.google.com/thumbnail?id=' + calendar.Model[n].Image + '"height="66" width="100%">' + '</a>'; 
           }
           number.appendChild(title);
         }
