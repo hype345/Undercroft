@@ -26,12 +26,27 @@ router.get('/eventInfo', (req, res) => {
     var temp = JSON.parse(result);
     const start = temp.start.dateTime || temp.start.date;
     const end = temp.end.dateTime || temp.end.date;
+
+    var descript;
+
+    if(typeof temp.description !== 'undefined')
+    {
+    var df = temp.description.search(/\n/);
+    if(df > 0)
+    {
+      descript = (temp.description).replace(/\n/g, '\\n');
+    }
+    else{
+      descript = temp.description;
+    }
+  }
+
     var data = {
       Date: start,
       StartTime: start,
       EndTime: end,
       Title: temp.summary,
-      Description: (temp.description).replace(/\n/g, '\\n'),
+      Description: descript,
     };
     res.render('eventInfo',{targetEvent: JSON.stringify(data)});
   })

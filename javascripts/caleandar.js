@@ -1,6 +1,5 @@
 
 var Calendar = function(model, options, date){
-
   // Default Values
   this.Options = {
     Color: '',
