@@ -31,7 +31,7 @@ router.get('/eventInfo', (req, res) => {
       StartTime: start,
       EndTime: end,
       Title: temp.summary,
-      Description: temp.description,
+      Description: (temp.description).replace(/\n/g, '\\n'),
     };
     res.render('eventInfo',{targetEvent: JSON.stringify(data)});
   })

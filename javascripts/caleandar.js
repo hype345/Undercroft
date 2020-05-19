@@ -295,4 +295,3 @@ function caleandar(el, data, settings){
   var obj = new Calendar(data, settings);
   createCalendar(obj, el);
 }
-console.log("code complete");

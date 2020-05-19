@@ -12,14 +12,15 @@
 
 
             <H1 id="title">Title</H1>
-            <h1 id="date">Date</h1>
-            <h1 id="description">Description</h1>
+            <p id="date">Date</p>
+            <pre id="description">Description</pre>
             <p id="startTimeToendTime">duration</p>
 
 
 
             <script>
-                var test = JSON.parse('<%- targetEvent %>');
+                var json = '<%- targetEvent %>';
+                var test = JSON.parse(json);
 
                 function prettyDate(time){
                     var date = new Date((time));

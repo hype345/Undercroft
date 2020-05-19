@@ -12,7 +12,6 @@
     <div  id="caleandar"></div>
     <script type="text/javascript" src="caleandar.js"></script>
     <script>
-
     var test = JSON.parse('<%- userdata %>');
     var userevents = [];
         test.forEach(function (arrayItem) {
@@ -21,7 +20,6 @@
             userevents.push(x);
         });
         var events = userevents;
-        console.log(events);
         var settings = {};
         var element = document.getElementById('caleandar');
         caleandar(element, events, settings);
