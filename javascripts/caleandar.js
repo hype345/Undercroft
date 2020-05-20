@@ -244,11 +244,20 @@ function createCalendar(calendar, element, adjuster){
             //title.innerHTML += '<a href="' + calendar.Model[n].Link + '">' + calendar.Model[n].Title + '</a>'; //title as link
             title.innerHTML += '<a href="' + calendar.Model[n].Link + '">' + '<img border="0" auto; alt="' + calendar.Model[n].Title + '" src="https://drive.google.com/thumbnail?id=' + calendar.Model[n].Image + '"height="86px" width="100%">' + '</a>'; 
           }
+          var cleanDateStart = new Date (calendar.Model[n].Date).toISOString();
+          var cleanDateEnd = new Date (calendar.Model[n].Date).toISOString();
+          function prettyDate(time){
+            var date = new Date((time));
+            var options = {hour: "numeric", minute: "numeric"};
+            return new Intl.DateTimeFormat("en-US", options).format(date);
+        }
+        var start = prettyDate(cleanDateStart);
+        var end = prettyDate(cleanDateEnd);
+
           day.appendChild(title);
           var tooltipText = document.createElement('span');
-          tooltipText.className += "tooltiptext"
-          var textNode = document.createTextNode("hello");
-          tooltipText.appendChild(textNode);
+          tooltipText.className += "tooltiptext";
+          tooltipText.innerHTML += '<a style="text-decoration: underline;" href="' + calendar.Model[n].Link + '">' + calendar.Model[n].Title + '</a><br><p1>' + start + ' - ' + end + '</p1>';
           day.appendChild(tooltipText);
         }
       }
