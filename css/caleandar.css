@@ -58,7 +58,7 @@
     /* padding: 5px; */
     height: 90px;
     border: 1px solid #ddd;
-    overflow-y: auto;
+    /* overflow-y:auto ; removed breaks code if muliple events per day but for unkown reason makes tooltip display properly so I am just going to remove it*/ 
   }
   .cld-day.clickable:hover{
     cursor: pointer;
@@ -96,4 +96,29 @@
         background: #eee;
       }
       .today .cld-number.eventday:hover{
+      }
+
+      .cld-day.eventday {
+        position: relative;
+      }
+      
+      .cld-day.eventday .tooltiptext {
+        visibility: hidden;
+        width: 150px;
+        height: 90px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+        top: -5px;
+        left: 105%;
+      }
+      
+      .cld-day.eventday:hover .tooltiptext {
+        visibility: visible;
       }

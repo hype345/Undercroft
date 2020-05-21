@@ -49,8 +49,8 @@ mongoUtil.connectToServer( function( err, client ) {
       var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-              user: 'cocminioncoc@gmail.com', //get passwords and username for new account when we switch it from my email to deafult email
-              pass: 'ClashofClans83*'
+              user: 'anonundercroft@gmail.com', //get passwords and username for new account when we switch it from my email to deafult email
+              pass: 'thankyoutide'
         }
       });
       var name;
@@ -65,11 +65,11 @@ mongoUtil.connectToServer( function( err, client ) {
       
 
       var mailOptions = {
-        from: 'cocminioncoc@gmail.com', //add deafult email that is not mine
+        from: 'anonundercroft@gmail.com', //add deafult email that is not mine
         to: 'jbadros@friendsbalt.org', //add undercrofts email when ready for deployment
         cc: req.body.email,
         subject: "New Newsletter Request",
-        text: req.body.name + "has requested to register for the newsletter. Their email is" + req.body.email + "and they want the following newsletters:" + req.body.preference1 + req.body.preference2
+        text: req.body.name + "has requested to register for the newsletter. Their email is " + req.body.email + "and they want the following newsletters:" + req.body.preference1 + req.body.preference2
       };
       transporter.sendMail(mailOptions, function(error, info){
         if (error) {
@@ -88,8 +88,8 @@ mongoUtil.connectToServer( function( err, client ) {
       var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-              user: 'cocminioncoc@gmail.com', //get passwords and username for new account when we switch it from my email to deafult email
-              pass: 'ClashofClans83*'
+              user: 'anonundercroft@gmail.com', //get passwords and username for new account when we switch it from my email to deafult email
+              pass: 'thankyoutide'
         }
       });
       var name;
@@ -103,8 +103,8 @@ mongoUtil.connectToServer( function( err, client ) {
       }
 
       var mailOptions = {
-        from: 'cocminioncoc@gmail.com', //add deafult email that is not mine
-        to: 'cshriver@friendsbalt.org', //add undercrofts email when ready for deployment
+        from: 'anonundercroft@gmail.com', //add deafult email that is not mine
+        to: 'jbadros@friendsbalt.org', //add undercrofts email when ready for deployment
         cc: req.body.email,
         subject: req.body.subject,
         text: req.body.message + "\n" + "\n" + "from," + "\n" + name
