@@ -245,7 +245,7 @@ function createCalendar(calendar, element, adjuster){
             title.innerHTML += '<a href="' + calendar.Model[n].Link + '">' + '<img border="0" auto; alt="' + calendar.Model[n].Title + '" src="https://drive.google.com/thumbnail?id=' + calendar.Model[n].Image + '"height="86px" width="100%">' + '</a>'; 
           }
           var cleanDateStart = new Date (calendar.Model[n].Date).toISOString();
-          var cleanDateEnd = new Date (calendar.Model[n].Date).toISOString();
+          var cleanDateEnd = new Date (calendar.Model[n].EndTime).toISOString();
           function prettyDate(time){
             var date = new Date((time));
             var options = {hour: "numeric", minute: "numeric"};
