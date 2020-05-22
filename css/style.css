@@ -288,6 +288,21 @@ form .submit:hover{
   
     margin: 5%;
   }
+  .sections3{
+    height: 200px;
+    width: 80%;
+
+
+    margin:10%;
+  }
+  .theslides{
+    position: relative;
+    top: 45%;
+    transform: translateY(-10%);
+    height: 150%;
+    margin-left: 10%;
+    background-color: rgb(245, 245, 220);
+}
 .contact-form{
     margin-right: 100px;
     margin-left: 100px;
