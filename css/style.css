@@ -7,6 +7,11 @@
     font-family: 'Lato';
 
 }
+html,body{
+    overflow-x: hidden;
+  
+  
+}
 .header {
     width: 100%;
     height: 80px;
@@ -123,8 +128,10 @@ form{
 .Slides {
     position: relative;
     top: 45%;
-    transform: translateY(-50%);
-    height:  350px;
+    transform: translateY(-60%);
+    height:  150%;
+    margin-left: 10%;
+    
     background-color: rgb(245, 245, 220);
 }
 .Mission {
@@ -282,6 +289,21 @@ form .submit:hover{
   
     margin: 5%;
   }
+  .sections3{
+      height: 200px;
+    width: 80%;
+
+
+    margin:10%;
+  }
+  .theslides{
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);
+    height: 150%;
+    margin-left: 10%;
+    background-color: rgb(245, 245, 220);
+}
 .contact-form{
     margin-right: 100px;
     margin-left: 100px;
@@ -291,3 +313,4 @@ form .submit:hover{
 a {
     color: inherit;
 }
+
