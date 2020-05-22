@@ -2,8 +2,10 @@
 <html lang="en">
     <%- include ('./include/head') %>
 <body class=back>
+    
     <%- include ('./include/header') %>
-    <div class="container">  
+    <div class="container"> 
+    
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0"></script>
 
          <%- include ('./include/background') %>
@@ -16,7 +18,28 @@
          <div class="sections2">
             <div class="Slides">
                
-            <img src="performance_shot_main2.jpg" width="85%" height="130%" alt="image">
+           
+            <img class="mySlides" src="performance_shot_main2.jpg" width=85%  height="130%">
+            <img class="mySlides" src="Undercroft001.jpg" width=85% height="130%">
+            <img class="mySlides" src="Undercroft002.jpg" width=85% height="130%">
+            <img class="mySlides" src="Undercroft003.jpg" width=85% height="130%">
+            <img class="mySlides" src="Undercroft005.jpg" width=85% height="130%">
+            <script>
+                var myIndex = 0;
+                carousel();
+                
+                function carousel() {
+                  var i;
+                  var x = document.getElementsByClassName("mySlides");
+                  for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                  }
+                  myIndex++;
+                  if (myIndex > x.length) {myIndex = 1}    
+                  x[myIndex-1].style.display = "block";  
+                  setTimeout(carousel, 5000);
+                }
+            </script>
         </div>
             <div class="Mission">
             <h1>Mission Statement</h1>
@@ -57,5 +80,6 @@
   
     <%- include ('./include/scripts') %>
     <%- include ('./include/footer') %>
+  
 </body>
 </html>
