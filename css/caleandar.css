@@ -92,7 +92,7 @@
       .cld-number.eventday{
         font-weight: bold;
       }
-      .cld-number.eventday:hover{
+      .cld-number.eventday{
         background: #eee;
       }
       .today .cld-number.eventday:hover{
