@@ -10,8 +10,32 @@
         <div class="mid">
             <h1 style="text-align: center">Red Wagon</h1>
             <div class="Margins">
+                <div class="sections3">
+                <div class="theslides">
+                    <img class="theslides" src="RedWagon001.jpg" width=85% height="130%">
+                    <img class="theslides" src="RedWagon002.jpg" width=85% height="130%">
+                    <img class="theslides" src="RedWagon003.jpg" width=85% height="130%">
+                    <img class="theslides" src="RedWagon004.jpg" width=85% height="130%">
+                    <script>
+                        var myIndex = 0;
+                        carousel();
+                        
+                        function carousel() {
+                          var i;
+                          var x = document.getElementsByClassName("theslides");
+                          for (i = 0; i < x.length; i++) {
+                            x[i].style.display = "none";  
+                          }
+                          myIndex++;
+                          if (myIndex > x.length) {myIndex = 1}    
+                          x[myIndex-1].style.display = "block";  
+                          setTimeout(carousel, 5000);
+                        }
+                    </script>
+                </div>
+            </div>
                 <div class="redWagonMission">
-                    <p1>Red Wagon is a collectively-run play space where parents, caregivers, and children can connect and play. We offer programming on Wednesday mornings and additional pop-up evening hours!</p1>
+                    <p1 style=font-size:20px>Red Wagon is a collectively-run play space where parents, caregivers, and children can connect and play. We offer programming on Wednesday mornings and additional pop-up evening hours!</p1>
                 </div>
                 <div class="Donate">
                     <h1>Become a Patron of the Red Wagon</h1>
@@ -20,8 +44,8 @@
                 </div>
                 <div class="contact">
                     <h1>Contact the Red Wagon</h1>
-                    <p1>Feel free to contact the Red Wagon through any information listed below and follow the Red Wagon's social media for any latest updates.</p1>
-                    <p2>Social Media</p2>
+                    <p1 style=font-size:20px>Feel free to contact the Red Wagon through any information listed below and follow the Red Wagon's social media for any latest updates.</p1>
+                    <p2 style=font-size:20px>Social Media</p2>
                     <p3><a href="https://www.instagram.com/redwagonbaltimore/" target="_blank"><img border="0" alt="instagram" src="ig.png" height="15" width="15">@redWagon</a></p3>
                     <p4><a href="https://www.facebook.com/RedWagonBaltimore/" target="_blank"><img border="0" alt="facebook" src="fb.png" height="15" width="15"</a>@redWagon</p4>
                 </div>
