@@ -32,9 +32,10 @@ function listEvents(events)
         }
         var startTime = prettyDate(cleanDate);
 
-        var day = document.createElement("h1");
-        var time = document.createElement("p1");
-        var title = document.createElement("p1");
+        var day = document.createElement("h3");
+        var time = document.createElement("p");
+        var title = document.createElement("p");
+        var space = document.createElement("br");
 
         var daynode = document.createTextNode(parts2[0] + ", " + parts2[1] + " " + ordinal_suffix_of(parts2[2]));
         day.appendChild(daynode);  
@@ -42,12 +43,13 @@ function listEvents(events)
         var timenode = document.createTextNode(startTime + " ");
         time.appendChild(timenode);
 
-        title.innerHTML = '<a style="text-decoration: underline;" href="' + events[i].Link + '">' + events[i].Title + '</a>';
+        title.innerHTML = '<a style="text-decoration: underline;" href="' + events[i].Link + '">' + events[i].Title +'</a>';
 
 
         var element = document.getElementById("upcomingEvents");
         element.appendChild(day);
         element.appendChild(time);
         element.appendChild(title);
+        element.appendChild(space);
     }
 }
