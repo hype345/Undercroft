@@ -3,7 +3,7 @@
   margin-left: 10%;
 }
 .cld-main a{
-  color: #7B00FF;
+  color: white;
 }
   .cld-datetime{
     position: relative;
@@ -64,7 +64,7 @@
     cursor: pointer;
   }
   .cld-day.today{
-    border: 1px solid #7B00FF;
+    border: 1px solid white;
   }
   .cld-day.disableDay{
     opacity: 0.5;
