@@ -220,7 +220,7 @@ form .submit:hover{
 
   .redWagonMission{
       position: relative;
-      top: 25%;
+      top: 5%;
       transform: translateY(-40%);
       height: 150px;
 
@@ -237,7 +237,7 @@ form .submit:hover{
 }
   .Donate{
     position: relative;
-    top: 60%;
+    top: 30%;
     transform: translateY(-40%);
     height: auto;
     background-color: rgb(245, 245, 220);
@@ -245,9 +245,9 @@ form .submit:hover{
   }
   .contact{
     position: relative;
-    /* top: 55%; */
-    transform: translateY(-40%);
-    height: 100px;
+    top: 5%; 
+    transform: translateY(-70%);
+    height: 200px;
 
     background-color: rgb(245, 245, 220);
     border: 3px solid black;
@@ -311,7 +311,7 @@ form .submit:hover{
   }
   .theslides{
     position: relative;
-    top: 45%;
+    top: 35%;
     transform: translateY(-50%);
     height: 150%;
     margin-left: 10%;
