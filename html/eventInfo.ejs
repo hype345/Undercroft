@@ -8,17 +8,21 @@
         <div class="edges">
         </div>
         <div class="mid">
-            <a href="events"class="button"><h1>Return to Events</h1></a>
+            
 
-
+            <br>
             <H1 id="title">Title</H1>
+            <br>
+            <div class="contact-form">
+            <h2>Event Details</h2>
             <p id="date">Date</p>
             <p id="startTimeToendTime">duration</p>
             <pre id="description">Description</pre>
+            <br>
+        </div>
+
             
-
-
-
+            
             <script>
                 var json = '<%- targetEvent %>';
                 var test = JSON.parse(json);
@@ -38,7 +42,17 @@
                 document.getElementById("date").innerHTML = Date;
                 document.getElementById("startTimeToendTime").innerHTML = start + " - " + end;
             </script>
-
+            <br>
+            <div class="contact-form">
+                <br>
+                <h2>Sobriety</h2>
+                <p>To learn more about our sobriety policy, please consider reading more about the Undercroft through our Sobriety Policy by clicking on the button below</p>
+                <br>
+                <button class ="linker" onclick="window.location.href = 'https://docs.google.com/document/d/1NgEDSUtJjpRVZ4fhl1iCBII6mXKS4uFAvSFYDzHUeTE/edit?usp=sharing';"> Sobriety Policy</button>
+                <br></br>
+              </div>
+            <br>
+            <div class="return"><a href="events"><h2>Return to Events</h2></a></div>
 
         </div>
         <div class="edges">

@@ -322,6 +322,9 @@ form .submit:hover{
     margin-left: 100px;
     border: 3px solid black;
 }
+.contact-form{
+    border: 3px solid black;
+}
 
 .contact-form4{
     margin-right: 100px;
@@ -345,18 +348,28 @@ a {
 .linker{
     padding: 20px 34px;
     background-color: rgb(245, 245, 220);
-    border-color: black;
+    border-color: transparent;
     font-size: 20px;
+}
+.linker:hover{
+    background-color: lightgrey;
 }
 
 .mce-EMAIL{
     background-color: red;
 }
 
-.clear{
-
-}
 h3{
     font-size: 20px;
+}
+.return{
+    padding: 20px 34px;
+    background-color: rgb(245, 245, 220);
+
+    margin-right: 35%;
+    margin-left: 35%;
+}
+.return:hover{
+    background-color: lightgrey;
 }
 
