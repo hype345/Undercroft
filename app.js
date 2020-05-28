@@ -25,15 +25,19 @@ app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use(express.static(path.join(__dirname, 'images')));
 app.use(express.static(path.join(__dirname, 'javascripts')));
 
-app.use(bodyParser.urlencoded({limit: '50mb' , parameterLimit:50000, extended: true})) 
+
+
 app.use(express.json({limit: '50mb'}));
 app.use(bodyParser.json({limit: '50mb'}))
 
+// create application/json parser
+var jsonParser = bodyParser.json()
+
+// create application/x-www-form-urlencoded parser
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 // Set the view engine to ejs
 app.set('view engine', 'ejs');
-
-
 
 
 myPort = process.env.PORT || 3000;
@@ -57,7 +61,7 @@ const run = async () => {
     console.log(`Server is running at ${myPort}`)
   });
 }
-
+ 
 var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -67,7 +71,7 @@ var transporter = nodemailer.createTransport({
 });
 
 
-app.post('/emailsend', (req, res) => {
+app.post('/emailsend', urlencodedParser, (req, res) => {
   console.log(req.body)
   var myname;
   if(req.body.name.length >0)
