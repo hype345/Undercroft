@@ -11,6 +11,24 @@
             <h1>Community</h1>
             <p>Welcome to the community page</p>
             <p>Here we showcase different community members and their contribution to the Undercroft cause</p>
+
+
+             <div>
+                <table>
+                    <%var database = JSON.parse(mydatabase)%>
+                  <% for(var i=0; i<database.length; i++) {%>
+                  <tr>
+                    <td><%= database[i].groupName %></td>
+                    <td><%= database[i].description %></td>
+                  </tr>
+                  <% } %>
+                </table>
+              </div> 
+
+            <script>
+                 var database = JSON.parse('<%- database %>');
+            </script>
+
         </div>
         <div class="edges">
         </div>

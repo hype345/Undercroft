@@ -1,19 +1,15 @@
 
-const MongoClient = require( 'mongodb' ).MongoClient;
+const mongoose = require('mongoose')
+
 const url = "mongodb+srv://chase:123@cluster0-dgmty.mongodb.net/test?retryWrites=true&w=majority"; 
-//"mongodb+srv://jbadros:<123>@cluster0-bfe5x.mongodb.net/test?retryWrites=true&w=majority"
+
 var _db;
 
 module.exports = {
 
-  connectToServer: function( callback ) {
-    MongoClient.connect( url,  { useNewUrlParser: true , useUnifiedTopology: true}, function( err, client ) {
-      _db  = client.db('Cluster0'); //name of cluster
+  connectToServer: async function( callback ) {
+    await mongoose.connect( url,  { useNewUrlParser: true , useUnifiedTopology: true}, function( err, client ) {
       return callback( err );
     } );
-  },
-
-  getDb: function() {
-    return _db;
   }
 };
