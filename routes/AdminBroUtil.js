@@ -20,6 +20,5 @@ const buildAdminRouter = (admin) => {
   });
   return router;
 };
-
 module.exports = buildAdminRouter;
 
