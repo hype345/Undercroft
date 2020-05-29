@@ -17,7 +17,7 @@ const options = {
     handler: async () => {
 
     },
-    component: AdminBro.bundle('../Dashboard/homepage.jsx')
+    component: AdminBro.bundle('../Dashboard/instructions.jsx')
   }
 };
 
