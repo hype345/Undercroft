@@ -15,16 +15,14 @@
 
 
              <div class = contact-form99> 
-                <table class = center style="border-spacing:0 50px;">
                     <%var database = JSON.parse(mydatabase)%>
                   <% for(var i=0; i<database.length; i++) {%>
-                  <tr>
-                    <td style="font-size: larger;"><%= database[i].groupName %></td>
-                    <td style="font-size: larger;"> <%= database[i].description %></td>
-                    <td><img src = "https://drive.google.com/thumbnail?id=<%= database[i].GDimageID %>"  width="100" height="100"/></td>
-                  </tr>
+                  <div>
+                    <div> <p style="font-size: larger; font-weight: bold;"><%= database[i].groupName %></p></div>
+                    <div> <p style="font-size: larger;"></p> <%= database[i].description %></p></div>
+                    <div><img src = "https://drive.google.com/thumbnail?id=<%= database[i].GDimageID %>" /></div><br></br>
+                  </div>
                   <% } %>
-                </table>
               </div> 
 
             <script>
