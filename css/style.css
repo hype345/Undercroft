@@ -141,16 +141,16 @@ form{
 .Slides {
     position: relative;
   top: 25px;
-    transform: translateY(-40%);
+    transform: translateY(-32%);
     height: auto;
-    margin-left: 10%;
+    
     
     background-color: rgb(245, 245, 220);
 }
 .Mission {
     position: relative;
     top: 70%;
-    transform: translateY(-100%);
+    transform: translateY(-115%);
     height: 95%;
    
     background-color: rgb(245, 245, 220);
@@ -159,7 +159,7 @@ form{
 .Location {
     position: relative;
     top: 95%;
-    transform: translateY(-80%);
+    transform: translateY(-95%);
     height: 140%;
     background-color: rgb(245, 245, 220);
     border: 3px solid black;
@@ -167,7 +167,7 @@ form{
 .Events {
     position: relative;
     top: 100%;
-    transform: translateY(-75%);
+    transform: translateY(-90%);
     height: 150%;
     background-color: rgb(245, 245, 220);
     border: 3px solid black;
@@ -373,3 +373,84 @@ h3{
     background-color: lightgrey;
 }
 
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto
+}
+
+.mySlides {
+    display: none;
+  
+
+     
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    margin-left: 11%;
+    margin-right: 11%;
+    padding: 16px;
+    color: #222428;
+    font-weight: bold;
+    font-size: 30px;
+    transition: .6s ease;
+    border-radius: 0 3px 3px 0
+}
+
+.next {
+    right: -50px;
+    border-radius: 3px 3px 3px 3px
+}
+
+.prev {
+    left: -50px;
+    border-radius: 3px 3px 3px 3px
+}
+
+.prev:hover,
+.next:hover {
+    color: #f2f2f2;
+    background-color: rgba(0, 0, 0, 0.8)
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding-top: 12px;
+  padding-bottom: 12px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #222428
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color .6s ease
+}
+
+.active,
+.dot:hover {
+    background-color: #717171
+}
