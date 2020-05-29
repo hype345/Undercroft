@@ -11,19 +11,18 @@
             <h1>Community</h1>
             <p>Welcome to the community page</p>
             <p>Here we showcase different community members and their contribution to the Undercroft cause</p>
+            <br> </br>
 
 
-             <div class = contact-form> 
-                <table class = center>
+             <div class = contact-form99> 
                     <%var database = JSON.parse(mydatabase)%>
                   <% for(var i=0; i<database.length; i++) {%>
-                  <tr>
-                    <td><%= database[i].groupName %></td>
-                    <td><%= database[i].description %></td>
-                    <td><img src = "https://drive.google.com/thumbnail?id=<%= database[i].GDimageID %>"  width="50" height="50"/></td>
-                  </tr>
+                  <div>
+                    <div> <p style="font-size: larger; font-weight: bold;"><%= database[i].groupName %></p></div>
+                    <div> <p style="font-size: larger;"></p> <%= database[i].description %></p></div>
+                    <div><img src = "https://drive.google.com/thumbnail?id=<%= database[i].GDimageID %>" /></div><br></br>
+                  </div>
                   <% } %>
-                </table>
               </div> 
 
             <script>

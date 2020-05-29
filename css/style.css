@@ -456,3 +456,11 @@ h3{
 .dot:hover {
     background-color: #717171
 }
+
+.contact-form99{
+    margin-right: 200px;
+    margin-left: 200px;
+    border: 3px solid black;
+    overflow: scroll;
+    height: 80%;
+}
