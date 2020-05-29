@@ -86,7 +86,7 @@ app.post('/emailsend', urlencodedParser, (req, res) => {
 
   var mailOptions = {
     from: 'anonundercroft@gmail.com', //add deafult email that is not mine
-    to: 'jbadros@friendsbalt.org', //add undercrofts email when ready for deployment
+    to: 'admin@theundercroft.org ', //add undercrofts email when ready for deployment
     cc: req.body.email,
     subject: req.body.subject,
     text: req.body.message + "\n" + "\n" + "from," + "\n" + myname
