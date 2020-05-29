@@ -19,6 +19,8 @@
             <p id="startTimeToendTime">duration</p>
             <pre id="description">Description</pre>
             <br>
+
+            <img id="image"src="">
         </div>
 
             
@@ -41,6 +43,7 @@
                 document.getElementById("description").innerHTML = test.Description;
                 document.getElementById("date").innerHTML = Date;
                 document.getElementById("startTimeToendTime").innerHTML = start + " - " + end;
+                document.getElementById("image").src = "https://drive.google.com/thumbnail?id=" + test.Image;
             </script>
             <br>
             <div class="contact-form">

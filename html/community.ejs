@@ -13,13 +13,14 @@
             <p>Here we showcase different community members and their contribution to the Undercroft cause</p>
 
 
-             <div>
-                <table>
+             <div class = contact-form> 
+                <table class = center>
                     <%var database = JSON.parse(mydatabase)%>
                   <% for(var i=0; i<database.length; i++) {%>
                   <tr>
                     <td><%= database[i].groupName %></td>
                     <td><%= database[i].description %></td>
+                    <td><img src = "https://drive.google.com/thumbnail?id=<%= database[i].GDimageID %>"  width="50" height="50"/></td>
                   </tr>
                   <% } %>
                 </table>

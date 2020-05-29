@@ -29,6 +29,14 @@ router.get('/eventInfo', (req, res) => {
 
     var descript;
 
+    var imgID;
+    if(typeof temp.attachments !== 'undefined'){
+      url = temp.attachments[0].fileUrl;
+      var urlParts = url.split('/');
+      imgID = urlParts[5];
+    }
+    else{imgID="1iZo_C-VZ0a7W_MLGOE7WJfCiqkiDB_pB"}
+
     if(typeof temp.description !== 'undefined')
     {
     var df = temp.description.search(/\n/);
@@ -47,6 +55,7 @@ router.get('/eventInfo', (req, res) => {
       EndTime: end,
       Title: temp.summary,
       Description: descript,
+      Image: imgID
     };
     res.render('eventInfo',{targetEvent: JSON.stringify(data)});
   })
