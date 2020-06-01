@@ -32,6 +32,17 @@ let userEvents = function() {
      }).then(userData => { return userData.data.items } )
 }
 
+let UpcominguserEvents = function() {
+  return calendar.events.list({
+    auth: jwtClient,
+    calendarId: 'cocminioncoc@gmail.com',
+    timeMin: (new Date()).toISOString(),
+    singleEvents: true,
+    orderBy: 'startTime',
+    maxResults: 7,
+     }).then(userData => { return userData.data.items } )
+}
+
 let findEventById = function(eventid) {
 return calendar.events.get({
 auth: jwtClient,
@@ -44,7 +55,7 @@ module.exports = {
 getResults: async () => 
     {
       let Result = await userEvents();
-      // console.log("result from gcUtil" + JSON.stringify(Result));
+      //console.log("all events result from gcUtil" + JSON.stringify(Result));
       return JSON.stringify(Result);
     },
 getEvent: async (eventid) =>
@@ -52,5 +63,11 @@ getEvent: async (eventid) =>
   let Result = await findEventById(eventid);
   //console.log("result from gcUtil" + JSON.stringify(Result));
   return JSON.stringify(Result);
-}
+},
+getUpcomingResults: async () => 
+    {
+      let Result = await UpcominguserEvents();
+       //console.log("upcoming events result from gcUtil" + JSON.stringify(Result));
+      return JSON.stringify(Result);
+    }
 }

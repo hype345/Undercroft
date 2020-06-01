@@ -22,18 +22,28 @@
     <script type="text/javascript" src="upcomingEvents.js"></script>
     <script>
     var test = JSON.parse('<%- userdata %>');
+    var test2 = JSON.parse('<%- moreuserdata %>');
+
     var userevents = [];
         test.forEach(function (arrayItem) {
             var x = arrayItem;
             x.Date = new Date (x.Date);
             userevents.push(x);
         });
+
+        var userevents2 = [];
+        test2.forEach(function (arrayItem) {
+            var x = arrayItem;
+            x.Date = new Date (x.Date);
+            userevents2.push(x);
+        });
+
         var events = userevents;
         var settings = {};
         var element = document.getElementById('caleandar');
         caleandar(element, events, settings);
 
-        listEvents(events);
+        listEvents(userevents2);
     </script>
 
         </div>

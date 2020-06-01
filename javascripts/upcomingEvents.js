@@ -1,5 +1,13 @@
 function listEvents(events)
 {
+    if(events.length == 0)
+    {
+        var element = document.getElementById("upcomingEvents");
+        var noEvents = document.createElement("h3");
+        noEvents.innerHTML = "There are currently no upcoming events";
+        element.appendChild(noEvents);
+
+    }
     for(var i = 0; i < 6 && i < events.length; i++) 
     {
 

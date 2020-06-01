@@ -66,6 +66,7 @@ router.get('/events', (req, res) => {
 
   var googleCalendar = require( './googleCalendarUtil');
   var data = [];
+  var data2 = [];
   googleCalendar.getResults().then((result) => 
   {
     var test = JSON.parse(result);
@@ -82,7 +83,24 @@ router.get('/events', (req, res) => {
       var x = {Date: start, Title: arrayItem.summary, Link: "eventInfo?eventID=" + arrayItem.id, Image: imgID, EndTime: end};
       data.push(x);
   });
-  res.render('events', {userdata: JSON.stringify(data)});
+  googleCalendar.getUpcomingResults().then((result2) => 
+  {
+    var test2 = JSON.parse(result2);
+    test2.forEach(function (arrayItem) {
+      const start = arrayItem.start.dateTime || arrayItem.start.date;
+      const end = arrayItem.end.dateTime || arrayItem.end.date;
+      var imgID;
+      if(typeof arrayItem.attachments !== 'undefined'){
+        url = arrayItem.attachments[0].fileUrl;
+        var urlParts = url.split('/');
+        imgID = urlParts[5];
+      }
+      else{imgID="1iZo_C-VZ0a7W_MLGOE7WJfCiqkiDB_pB"}
+      var x = {Date: start, Title: arrayItem.summary, Link: "eventInfo?eventID=" + arrayItem.id, Image: imgID, EndTime: end};
+      data2.push(x);
+  });
+  res.render('events', {userdata: JSON.stringify(data), moreuserdata: JSON.stringify(data2)});
+  })
   })
 });
 
